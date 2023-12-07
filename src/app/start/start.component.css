@@ -1,0 +1,45 @@
+
+
+#body {
+
+    width: 100vw;
+    height: 100vh;
+    background-image: url(https://images.pexels.com/photos/4127641/pexels-photo-4127641.jpeg);
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;           
+      
+}
+
+
+
+
+h1{
+    font-size: 70px;
+    color: saddlebrown;
+}
+#bg{
+    
+    width: 40%;
+    margin: 100px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    background-color: saddlebrown;
+    padding: 10px 15px;
+    border-radius: 30px;
+    
+}
+span{
+    padding: 0 15px;
+}
+
+.top-space{
+    margin-top: 25px;
+}

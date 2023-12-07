@@ -1,0 +1,101 @@
+
+  <!-- <ng-container *ngIf="product.length != 0">
+    <div class="container" >
+      <div class="card mb-3" style="max-width: 540px;" *ngFor="let item of product; let i = index">
+        <div class="row g-0" >
+            <div class="col-md-4">
+              <img [src]="item.image" alt="dress image" width="200px" height="200px">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">{{item.description}}</h5>
+                <p class="card-text">PRICE: {{item.price}}</p>
+                <p class="card-text">Seller: {{item.title}}</p>
+                <p class="card-text"><small class="text-body-secondary">Eligible for FREE Shipping</small></p>
+  
+                <div class="btn-group" role="group">
+                  <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    Qty: 1
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">1</a></li>
+                    <li><a class="dropdown-item" href="#">2</a></li>
+                    <li><a class="dropdown-item" href="#">3</a></li>
+                    <li><a class="dropdown-item" href="#">4</a></li>
+                  </ul>
+                </div>
+                  <button (click)="removeItem(item)" class="btn"><i class="fa-solid fa-trash-can"></i></button>
+              </div>
+            </div>  
+        </div>
+      </div>
+    </div>
+  </ng-container> -->
+
+<app-header></app-header>
+
+<ng-container *ngIf="product.length != 0">
+  <div class="container full">
+    <div class="row">
+      <div class="col-sm-8 mb-3 mb-sm-0">
+        <div class="card mb-3"  *ngFor="let item of product; let i = index">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img [src]="item.image" alt="dress image" width="200px" height="200px">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">{{item.description}}</h5>
+                <p class="card-text"><strong>PRICE: <i class="fa-solid fa-indian-rupee-sign"></i> {{item.price}}</strong></p>
+                <p class="card-text">Seller: {{item.title}}</p>
+                <p class="card-text"><small class="text-body-secondary">Eligible for FREE Shipping</small></p>
+                <div class="btn-group" role="group">
+                  <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    Qty: 1
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">1</a></li>
+                    <li><a class="dropdown-item" href="#">2</a></li>
+                    <li><a class="dropdown-item" href="#">3</a></li>
+                    <li><a class="dropdown-item" href="#">4</a></li>
+                  </ul>
+                </div>
+                  <button (click)="removeItem(item)" class="btn"><i class="fa-solid fa-trash-can"></i></button>
+              </div>
+            </div>
+          </div>
+      </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="card border-light mb-3">
+          <div class="card-header"><strong>Price Details</strong></div>
+          <div class="card-body">
+            <p class="card-text">Items:</p>
+            <p class="card-text">Delivery Charges: FREE</p>
+            <h5 class="card-title pb-3"><strong>Subtotal: <i class="fa-solid fa-indian-rupee-sign"></i> {{grandTotal}}</strong></h5>
+            <a href="#" class="btn btn-primary" routerLink="/checkout">Place Order</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </ng-container>
+  
+
+ 
+
+<ng-container *ngIf="product.length == 0">
+    <div class="container empty">
+        <div class="card">
+            <h5 class="card-title">My Cart</h5>
+        </div>
+        <div class="center">
+            <img src="../assets/images/emptyCart.png" alt="images" width="200px">
+            <h4>Your cart is empty</h4>
+            <h6>Add item now for free delivery</h6>
+            <button routerLink="/products" class="btn btn-primary">Shop Now</button>
+        </div>
+    </div>
+</ng-container>
+
+<app-footer></app-footer>

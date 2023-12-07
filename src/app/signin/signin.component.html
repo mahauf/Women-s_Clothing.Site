@@ -1,0 +1,30 @@
+<div id="body">
+    <div id="box">
+        <h1>Welcome Back!</h1>
+        <form (ngSubmit)="onSubmit()" [formGroup] = 'signInForm'>
+    
+          <div class="bx">
+            <input  formControlName="username" type="text" name="" id="" placeholder="User name">
+            <i class="fa-solid fa-user"></i>
+    
+          </div>
+    
+          <div class="bx">
+            <input formControlName="password" type="password" placeholder="Password" id="paswd">
+    
+            <i class="fa-solid fa-lock" onclick="fun()"></i>
+            <!-- <i class="fa-solid fa-lock-open"></i> -->
+          </div>
+    
+          <div class="remember-forget">
+            <label for=""><input type="checkbox" name="" id=""> Remember Me</label>
+            <a href="">Forget Password?</a>
+          </div>
+    
+    
+          <input [disabled]="!signInForm.valid" class="bt" type="submit" value="Get Started">
+    
+          <h5>New User? <a routerLink="/signup" >Create account</a></h5>
+        </form>
+      </div>
+</div>

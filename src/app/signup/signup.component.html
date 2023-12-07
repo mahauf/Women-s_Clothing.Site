@@ -1,0 +1,39 @@
+<div id="body">
+    <div id="box">
+    
+        <h1>New Account</h1>
+        <form (ngSubmit)="onSubmit()" [formGroup]='signupForm'>
+    
+           
+                <input formControlName="fullname" class="bx" type="text" name="" id="" placeholder="Full Name">
+                <br>
+                <span *ngIf="signupForm.hasError('required', 'fullname') && signupForm.controls['fullname'].dirty">*FullName is required</span>
+                <br>
+            
+       
+    
+            <input formControlName="username" class="bx" type="text" name="" id="" placeholder="User name">
+            <br>
+            <span *ngIf="signupForm.hasError('required', 'username') && signupForm.controls['username'].dirty">*UserName is required</span>
+            <br>
+    
+            <input formControlName="email" class="bx" type="email" placeholder="E-mail"><br>
+            <span *ngIf="signupForm.hasError('required', 'email') && signupForm.controls['email'].dirty">*Email is required</span><span *ngIf="signupForm.hasError('email', 'email')">*Email is Invalid</span>
+             <br>
+    
+    
+            <input formControlName="password" class="bx" type="password" name="" id="" placeholder="Password">
+            <br>
+            <span *ngIf="signupForm.hasError('required', 'password') && signupForm.controls['password'].dirty">*Password is required</span>
+            <br>
+    
+            <div class="agree">
+                <label class="light" for=""> <input type="checkbox" name="" id="" > I agree to the Terms</label>
+            </div>
+            <br><br>
+    
+            <input [disabled]="!signupForm.valid" class="bt" type="submit" value="Create account">
+    
+        </form>
+    </div>
+</div>
